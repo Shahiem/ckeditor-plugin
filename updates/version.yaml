@@ -1,0 +1,7 @@
+1.0.1: First version
+1.0.2: New skin (Thanks Flynsarmy)
+1.0.3: Add setting to automatically apply to cms (Thanks Flynsarmy)
+1.0.4: Added file browser (Upload care), Added setting field for public key
+1.0.5: Error fixed by content and added skin.js file
+1.0.6: Added filebrowser (see documentation), Added new setting option for content entries, code cleanup
+1.0.7: Deleted Uploadcare plugin, changed settings page (skin, editor width and height, toolbar), added save hotkey
