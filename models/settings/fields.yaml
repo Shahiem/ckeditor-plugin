@@ -32,6 +32,72 @@ tabs:
        tab: Editor
        span: right
 
+      language:
+       label: Editor language
+       type: dropdown
+       options:
+        af: Afrikaans
+        ar: Arabic
+        eu: Basque
+        bn: Bengali/Bangla
+        bs: Bosnian
+        bg: Bulgarian
+        ca: Catalan
+        zh-cn: Chinese Simplified
+        zh: Chinese Traditional
+        hr: Croatian
+        cs: Czech
+        da: Danish
+        nl: Dutch
+        en: English
+        en-au: English (Australia)
+        en-ca: English (Canadian)
+        en-gb: English (United Kingdom)
+        eo: Esperanto
+        et: Estonian
+        fo: Faroese
+        fi: Finnish
+        fr: French
+        fr-ca: French (Canada)
+        gl: Galician
+        ka: Georgian
+        de: German
+        el: Greek
+        gu: Gujarati
+        he: Hebrew
+        hi: Hindi
+        hu: Hungarian
+        is: Icelandic
+        it: Italian
+        ja: Japanese
+        km: Khmer
+        ko: Korean
+        lv: Latvian
+        lt: Lithuanian
+        ms: Malay
+        mn: Mongolian
+        no: Norwegian
+        nb: Norwegian Bokmal
+        fa: Persian
+        pl: Polish
+        pt-br: Portuguese (Brazil)
+        pt: Portuguese (Portugal)
+        ro: Romanian
+        ru: Russian
+        sr: Serbian (Cyrillic)
+        sr-latn: Serbian (Latin)
+        sk: Slovak
+        sl: Slovenian
+        es: Spanish
+        sv: Swedish
+        th: Thai
+        tr: Turkish
+        uk: Ukrainian
+        vi: Vietnamese
+        cy: Welsh
+
+       tab: Editor
+
       show_cms_content_as_wysiwyg:
        label: Use CKEditor for CMS  - Content?
        type: switch

@@ -21,24 +21,20 @@ class Wysiwyg extends FormWidgetBase
 
     public function prepareVars()
     {
-<<<<<<< HEAD
          $this->vars['name']      = $this->formField->getName();
          $this->vars['value']     = $this->model->{$this->columnName};
          $this->vars['width']     = Settings::instance()->form_width;
          $this->vars['height']    = Settings::instance()->form_height;
          $this->vars['toolbar']   = Settings::instance()->toolbar;
          $this->vars['skin']      = Settings::instance()->skin;
-=======
-         $this->vars['name'] = $this->formField->getName();
-         $this->vars['value'] = $this->model->{$this->columnName};
+         $this->vars['value']     = $this->model->{$this->columnName};
          $this->vars['up_public'] = Settings::instance()->up_public;
-
->>>>>>> parent of eca20bb... Revert "asset"
+         $this->vars['language']  = Settings::instance()->language;
     }
 
     public function loadAssets()
     {
-        $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/assets/ckeditor/ckeditor.js', 'ShahiemSeymor.Ckeditor');
-        $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/assets/ckeditor/adapters/jquery.js', 'ShahiemSeymor.Ckeditor');
+        $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/wysiwyg/assets/ckeditor/ckeditor.js',        'ShahiemSeymor.Ckeditor');
+        $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/wysiwyg/assets/ckeditor/adapters/jquery.js', 'ShahiemSeymor.Ckeditor');
     }
 }

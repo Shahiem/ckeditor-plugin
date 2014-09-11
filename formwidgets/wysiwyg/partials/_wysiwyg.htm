@@ -7,11 +7,12 @@ var roxyFileman = '<?php echo URL::to('ckeditorupload') ?>';
 
 $(document).ready(function() {
 	$('[data-control="wysiwyg"] textarea').ckeditor({
-		width: '<?php echo $width; ?>',
-		height: '<?php echo $height; ?>',
-		toolbar: '<?php echo (trim($toolbar) == ''? 'Basic' : ucfirst($toolbar)); ?>',
-		skin: '<?php echo (trim($skin) == ''? 'october' : $skin); ?>',
-		filebrowserBrowseUrl: '<?php echo URL::to('elfinder/ckeditor4'); ?>'
+		width:    '<?php echo $width; ?>',
+		height:   '<?php echo $height; ?>',
+		toolbar:  '<?php echo (trim($toolbar) == ''? 'Basic' : ucfirst($toolbar)); ?>',
+		skin:     '<?php echo (trim($skin) == '' ? 'october' : $skin); ?>',
+		filebrowserBrowseUrl: '<?php echo URL::to('elfinder/ckeditor4'); ?>',
+		language: '<?php echo (trim($language) == '' ? 'en' : $language); ?>'
 	}).ckeditor(function() {
 		this.addCommand('saveForm', {
 			exec: function(editor) {
