@@ -20,7 +20,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'CKeditor',
             'description' => 'CKEditor is a ready-for-use HTML text editor designed to simplify web content creation',
-            'author'      => 'ShahiemSeymor',
+            'author'      => 'ShahiemSeymor'
         ];
     }
 
@@ -43,14 +43,14 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-paperclip',
                 'context'     => 'mysettings',
                 'category'    =>  SettingsManager::CATEGORY_MYSETTINGS,
-                'class'       => 'ShahiemSeymor\Ckeditor\Models\Settings',
+                'class'       => 'ShahiemSeymor\Ckeditor\Models\Settings'
             ]
         ];
     }
 
     public function boot()
     {
-        \App::register('Barryvdh\Elfinder\ElfinderServiceProvider');
+        App::register('Barryvdh\Elfinder\ElfinderServiceProvider');
         
         Event::listen('backend.form.extendFields', function($form) 
         {

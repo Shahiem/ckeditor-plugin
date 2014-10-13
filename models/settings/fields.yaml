@@ -1,147 +1,147 @@
 tabs:
     fields:
-      form_width:
-       label: Editor width
-       placeholder: 100%
-       type: text
-       tab: Editor
-       span: left
 
-      form_height:
-       label: Editor height
-       placeholder: 100px
-       type: text
-       tab: Editor
-       span: right
+        form_width:
+            label: Width
+            placeholder: 100%
+            type: text
+            tab: Editor
+            span: left
 
-      toolbar:
-       label: Editor toolbar
-       type: dropdown
-       options:
-        basic: Basic
-        full: Full
-       tab: Editor
-       span: left
+        form_height:
+            label: Height
+            placeholder: 100px
+            type: text
+            tab: Editor
+            span: right
 
-      skin:
-       label: Skin
-       type: dropdown
-       options:
-        moono: Moono
-        october: October
-       tab: Editor
-       span: right
+        toolbar:
+            label: Toolbar
+            type: dropdown
+            options:
+                basic: Basic
+                full: Full
+            tab: Editor
+            span: left
 
-      language:
-       label: Editor language
-       type: dropdown
-       options:
-        af: Afrikaans
-        ar: Arabic
-        eu: Basque
-        bn: Bengali/Bangla
-        bs: Bosnian
-        bg: Bulgarian
-        ca: Catalan
-        zh-cn: Chinese Simplified
-        zh: Chinese Traditional
-        hr: Croatian
-        cs: Czech
-        da: Danish
-        nl: Dutch
-        en: English
-        en-au: English (Australia)
-        en-ca: English (Canadian)
-        en-gb: English (United Kingdom)
-        eo: Esperanto
-        et: Estonian
-        fo: Faroese
-        fi: Finnish
-        fr: French
-        fr-ca: French (Canada)
-        gl: Galician
-        ka: Georgian
-        de: German
-        el: Greek
-        gu: Gujarati
-        he: Hebrew
-        hi: Hindi
-        hu: Hungarian
-        is: Icelandic
-        it: Italian
-        ja: Japanese
-        km: Khmer
-        ko: Korean
-        lv: Latvian
-        lt: Lithuanian
-        ms: Malay
-        mn: Mongolian
-        no: Norwegian
-        nb: Norwegian Bokmal
-        fa: Persian
-        pl: Polish
-        pt-br: Portuguese (Brazil)
-        pt: Portuguese (Portugal)
-        ro: Romanian
-        ru: Russian
-        sr: Serbian (Cyrillic)
-        sr-latn: Serbian (Latin)
-        sk: Slovak
-        sl: Slovenian
-        es: Spanish
-        sv: Swedish
-        th: Thai
-        tr: Turkish
-        uk: Ukrainian
-        vi: Vietnamese
-        cy: Welsh
+        skin:
+            label: Skin
+            type: dropdown
+            options:
+                moono: Moono
+                october: October
+            tab: Editor
+            span: right
 
-       tab: Editor
+        language:
+            label: Language
+            type: dropdown
+            options:
+                af: Afrikaans
+                ar: Arabic
+                eu: Basque
+                bn: Bengali/Bangla
+                bs: Bosnian
+                bg: Bulgarian
+                ca: Catalan
+                zh-cn: Chinese Simplified
+                zh: Chinese Traditional
+                hr: Croatian
+                cs: Czech
+                da: Danish
+                nl: Dutch
+                en: English
+                en-au: English (Australia)
+                en-ca: English (Canadian)
+                en-gb: English (United Kingdom)
+                eo: Esperanto
+                et: Estonian
+                fo: Faroese
+                fi: Finnish
+                fr: French
+                fr-ca: French (Canada)
+                gl: Galician
+                ka: Georgian
+                de: German
+                el: Greek
+                gu: Gujarati
+                he: Hebrew
+                hi: Hindi
+                hu: Hungarian
+                is: Icelandic
+                it: Italian
+                ja: Japanese
+                km: Khmer
+                ko: Korean
+                lv: Latvian
+                lt: Lithuanian
+                ms: Malay
+                mn: Mongolian
+                no: Norwegian
+                nb: Norwegian Bokmal
+                fa: Persian
+                pl: Polish
+                pt-br: Portuguese (Brazil)
+                pt: Portuguese (Portugal)
+                ro: Romanian
+                ru: Russian
+                sr: Serbian (Cyrillic)
+                sr-latn: Serbian (Latin)
+                sk: Slovak
+                sl: Slovenian
+                es: Spanish
+                sv: Swedish
+                th: Thai
+                tr: Turkish
+                uk: Ukrainian
+                vi: Vietnamese
+                cy: Welsh
+            tab: Editor
 
-      show_cms_content_as_wysiwyg:
-       label: Use CKEditor for CMS  - Content?
-       type: switch
-       tab: Content
-       span: left
-       comment: If checked, CMS - Content entries will use the CKEditor.
-       default: false
+        show_cms_content_as_wysiwyg:
+            label: Use CKEditor for CMS  - Content?
+            type: switch
+            tab: Content
+            span: left
+            comment: If checked, the content entries will use the CKEditor.
+            default: false
 
-      show_cms_partial_as_wysiwyg:
-       label: Use CKEditor for CMS  - Partials?
-       type: switch
-       tab: Content
-       span: right
-       comment: If checked, CMS - Partials entries will use the CKEditor.
-       default: false
+        show_cms_partial_as_wysiwyg:
+            label: Use CKEditor for CMS  - Partials?
+            type: switch
+            tab: Content
+            span: right
+            comment: If checked, CMS - Partials entries will use the CKEditor.
+            default: false
 
-      show_cms_layouts_as_wysiwyg:
-       label: Use CKEditor for CMS  - Layouts?
-       type: switch
-       tab: Content
-       span: left
-       comment: If checked, CMS - Layouts entries will use the CKEditor.
-       default: false
+        show_cms_layouts_as_wysiwyg:
+            label: Use CKEditor for CMS  - Layouts?
+            type: switch
+            tab: Content
+            span: left
+            comment: If checked, the content entries will use the CKEditor.
+            default: false
 
-      show_cms_pages_as_wysiwyg:
-       label: Use CKEditor for CMS  - Pages?
-       type: switch
-       tab: Content
-       span: right
-       comment: If checked, CMS - Pages entries will use the CKEditor.
-       default: false
+        show_cms_pages_as_wysiwyg:
+            label: Use CKEditor for CMS  - Pages?
+            type: switch
+            tab: Content
+            span: right
+            comment: If checked, the content entries will use the CKEditor.
+            default: false
 
-      show_shahiem_maintenance_as_wysiwyg:
-       label: Use CKEditor for ShahiemSeymor Maintenance  - Content?
-       type: switch
-       tab: Content
-       span: left
-       comment: If checked, ShahiemSeymor - Content entries will use the CKEditor.
-       default: false
+        show_shahiem_maintenance_as_wysiwyg:
+            label: Use CKEditor for ShahiemSeymor Maintenance  - Content?
+            type: switch
+            tab: Content
+            span: left
+            comment: If checked, the content entries will use the CKEditor.
+            default: false
 
-      show_rainlab_blog_as_wysiwyg:
-       label: Use CKEditor for Rainlab blog  - Content?
-       type: switch
-       tab: Content
-       span: right
-       comment: If checked, Rainlab blog - Content entries will use the CKEditor.
-       default: false
+        show_rainlab_blog_as_wysiwyg:
+            label: Use CKEditor for Rainlab blog  - Content?
+            type: switch
+            tab: Content
+            span: right
+            comment: If checked, the content entries will use the CKEditor.
+            default: false
