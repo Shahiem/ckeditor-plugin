@@ -83,6 +83,11 @@ class Plugin extends PluginBase
             {
                 return static::useEditor($form);
             }
+
+            if(Settings::get('show_rainlab_pages_as_wysiwyg', false) && get_class($form->config->model) == 'RainLab\Pages\Classes\Page')
+            {
+                return static::useEditor($form);
+            }
         });
     }
 
@@ -90,7 +95,7 @@ class Plugin extends PluginBase
     {
         foreach ($form->getFields() as $field )
         {
-            if (empty($field->config['type']) || $field->config['type'] != 'codeeditor' && $field->config['type'] != 'Eein\Wysiwyg\FormWidgets\Trumbowyg')
+            if (empty($field->config['type']) || !in_array($field->config['type'], ['richeditor', 'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg']))
             continue;
 
             $field->config['type'] = $field->config['widget'] = 'ShahiemSeymor\Ckeditor\FormWidgets\Wysiwyg';

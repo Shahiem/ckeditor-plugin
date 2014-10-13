@@ -145,3 +145,11 @@ tabs:
             span: right
             comment: If checked, the content entries will use the CKEditor.
             default: false
+
+        show_rainlab_pages_as_wysiwyg:
+            label: Use CKEditor for Rainlab Pages - Page?
+            type: switch
+            tab: Content
+            span: left
+            comment: If checked, the content entries will use the CKEditor.
+            default: false
