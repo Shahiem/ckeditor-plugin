@@ -10,6 +10,7 @@ use Backend;
 use Event;
 use Illuminate\Foundation\AliasLoader;
 use ShahiemSeymor\Ckeditor\Models\Settings;
+use System\Classes\PluginManager;
 use System\Classes\PluginBase;
 use System\Classes\SettingsManager;
 
@@ -54,6 +55,81 @@ class Plugin extends PluginBase
         
         Event::listen('backend.form.extendFields', function($form) 
         {
+
+            if ($form->model instanceof \ShahiemSeymor\Ckeditor\Models\Settings)
+            {
+                if(PluginManager::instance()->hasPlugin('Radiantweb.Problog'))
+                {
+                    $form->addFields([
+                        'show_radiantweb_problog_as_wysiwyg' => [
+                            'label'     => 'Use Radiantweb - ProBlog',
+                            'type'      => 'switch',
+                            'span'      => 'auto',
+                            'default'   => 'false',
+                            'comment'   => 'If checked, the content entries will use the CKEditor.',
+                            'tab'       => 'Content'
+                        ]
+                    ], 'primary');
+                }
+
+                if(PluginManager::instance()->hasPlugin('Radiantweb.Proevents'))
+                {
+                    $form->addFields([
+                        'show_radiantweb_proevents_as_wysiwyg' => [
+                            'label'     => 'Use Radiantweb - ProEvents',
+                            'type'      => 'switch',
+                            'span'      => 'auto',
+                            'default'   => 'false',
+                            'comment'   => 'If checked, the content entries will use the CKEditor.',
+                            'tab'       => 'Content'
+                        ]
+                    ], 'primary');
+                }
+
+                if(PluginManager::instance()->hasPlugin('RainLab.Pages'))
+                {
+                    $form->addFields([
+                        'show_rainlab_pages_as_wysiwyg' => [
+                            'label'     => 'Use RainLab - Static Pages',
+                            'type'      => 'switch',
+                            'span'      => 'auto',
+                            'default'   => 'false',
+                            'comment'   => 'If checked, the content entries will use the CKEditor.',
+                            'tab'       => 'Content'
+                        ]
+                    ], 'primary');
+                }
+
+                if(PluginManager::instance()->hasPlugin('RainLab.Blog'))
+                {
+                    $form->addFields([
+                        'show_rainlab_blog_as_wysiwyg' => [
+                            'label'     => 'Use RainLab - Blog',
+                            'type'      => 'switch',
+                            'span'      => 'auto',
+                            'default'   => 'false',
+                            'comment'   => 'If checked, the content entries will use the CKEditor.',
+                            'tab'       => 'Content'
+                        ]
+                    ], 'primary');
+                }
+
+                if(PluginManager::instance()->hasPlugin('ShahiemSeymor.Maintenance'))
+                {
+                    $form->addFields([
+                        'show_shahiem_maintenance_as_wysiwyg' => [
+                            'label'     => 'Use ShahiemSeymor - Maintenance',
+                            'type'      => 'switch',
+                            'span'      => 'auto',
+                            'default'   => 'false',
+                            'comment'   => 'If checked, the content entries will use the CKEditor.',
+                            'tab'       => 'Content'
+                        ]
+                    ], 'primary');
+                }
+
+            }
+
             if(Settings::get('show_cms_pages_as_wysiwyg', false) && get_class($form->config->model) == 'Cms\Classes\Page')
             {
                 return static::useEditor($form);
@@ -87,6 +163,16 @@ class Plugin extends PluginBase
             if(Settings::get('show_rainlab_pages_as_wysiwyg', false) && get_class($form->config->model) == 'RainLab\Pages\Classes\Page')
             {
                 return static::useEditor($form);
+            }
+
+            if(Settings::get('show_radiantweb_problog_as_wysiwyg', false) && $form->model instanceof \Radiantweb\Problog\Models\Post)
+            {
+                return static::useEditor($form);
+            }
+            
+            if(Settings::get('show_radiantweb_proevents_as_wysiwyg', false) && $form->model instanceof \Radiantweb\Proevents\Models\Event)
+            {
+               return static::useEditor($form);
             }
         });
     }
