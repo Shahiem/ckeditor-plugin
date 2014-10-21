@@ -6,3 +6,4 @@
 1.0.6: Added filebrowser (see documentation), Added new setting option for content entries, code cleanup
 1.0.7: Deleted Uploadcare plugin, changed settings page (skin, editor width and height, toolbar), added save hotkey
 1.0.8: Bug fixed, added editor language support
+1.0.9: Added Youtube plugin, Added ProEvents, ProBlog and Rainlab Static Pages to the settings page, CKeditor updated, code cleanup
