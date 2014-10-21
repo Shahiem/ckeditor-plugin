@@ -5,10 +5,10 @@
 
 CKEDITOR.editorConfig = function( config ) {
 	CKEDITOR.config.toolbar_Basic = [
-		['Bold','Italic','Underline','StrikeThrough','-','Undo','Redo','-','Cut','Copy','Paste','Find','Replace','-','Outdent','Indent','-','Print'],
+		['Bold','Italic','Underline','Strike','-','Undo','Redo','-','Cut','Copy','Paste','Find','Replace','-','Outdent','Indent','-','Print'],
    		['NumberedList','BulletedList','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
    		['Styles','Format','Font','FontSize'],
-   		['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor']
+   		['Image','Table','-','Link','Flash','Youtube','Smiley','TextColor','BGColor']
 	];
-
+	CKEDITOR.config.extraPlugins = 'youtube';
 };
