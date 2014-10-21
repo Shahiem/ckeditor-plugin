@@ -52,10 +52,10 @@ class Plugin extends PluginBase
     public function boot()
     {
         App::register('Barryvdh\Elfinder\ElfinderServiceProvider');
-        
+
         Event::listen('backend.form.extendFields', function($form) 
         {
-
+            $editors = ['richeditor', 'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg'];
             if ($form->model instanceof \ShahiemSeymor\Ckeditor\Models\Settings)
             {
                 if(PluginManager::instance()->hasPlugin('Radiantweb.Problog'))
@@ -132,56 +132,56 @@ class Plugin extends PluginBase
 
             if(Settings::get('show_cms_pages_as_wysiwyg', false) && get_class($form->config->model) == 'Cms\Classes\Page')
             {
-                return static::useEditor($form);
+                return static::useEditor($form, $editors);
             }
 
             if(Settings::get('show_cms_content_as_wysiwyg', false) && get_class($form->config->model) == 'Cms\Classes\Content')
             {
-                return static::useEditor($form);
+                return static::useEditor($form, $editors);
             }
 
             if(Settings::get('show_cms_partial_as_wysiwyg', false) && get_class($form->config->model) == 'Cms\Classes\Partial')
             {
-                return static::useEditor($form);
+                return static::useEditor($form, $editors);
             }
 
             if(Settings::get('show_cms_layouts_as_wysiwyg', false) && get_class($form->config->model) == 'Cms\Classes\Layout')
             {
-                return static::useEditor($form);
+                return static::useEditor($form, $editors);
             }
 
             if(Settings::get('show_rainlab_blog_as_wysiwyg', false) && $form->model instanceof \RainLab\Blog\Models\Post)
             {
-                return static::useEditor($form);
+                return static::useEditor($form, $editors);
             }
 
             if(Settings::get('show_shahiem_maintenance_as_wysiwyg', false) && $form->model instanceof \ShahiemSeymor\Maintenance\Models\Settings)
             {
-                return static::useEditor($form);
+                return static::useEditor($form, ['richeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg']);
             }
 
             if(Settings::get('show_rainlab_pages_as_wysiwyg', false) && get_class($form->config->model) == 'RainLab\Pages\Classes\Page')
             {
-                return static::useEditor($form);
+                return static::useEditor($form, $editors);
             }
 
             if(Settings::get('show_radiantweb_problog_as_wysiwyg', false) && $form->model instanceof \Radiantweb\Problog\Models\Post)
             {
-                return static::useEditor($form);
+                return static::useEditor($form, $editors);
             }
             
             if(Settings::get('show_radiantweb_proevents_as_wysiwyg', false) && $form->model instanceof \Radiantweb\Proevents\Models\Event)
             {
-               return static::useEditor($form);
+               return static::useEditor($form, $editors);
             }
         });
     }
 
-    public static function useEditor($form)
+    public static function useEditor($form, $editor)
     {
         foreach ($form->getFields() as $field )
         {
-            if (empty($field->config['type']) || !in_array($field->config['type'], ['richeditor', 'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg']))
+            if (empty($field->config['type']) || !in_array($field->config['type'], $editor))
             continue;
 
             $field->config['type'] = $field->config['widget'] = 'ShahiemSeymor\Ckeditor\FormWidgets\Wysiwyg';

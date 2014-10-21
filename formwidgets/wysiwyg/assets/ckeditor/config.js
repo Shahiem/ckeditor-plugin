@@ -4,13 +4,11 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-	// Define changes to default configuration here. For example:
-	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
 	CKEDITOR.config.toolbar_Basic = [
 		['Bold','Italic','Underline','StrikeThrough','-','Undo','Redo','-','Cut','Copy','Paste','Find','Replace','-','Outdent','Indent','-','Print'],
    		['NumberedList','BulletedList','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
    		['Styles','Format','Font','FontSize'],
-   		['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor','Source']
+   		['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor']
 	];
+
 };
