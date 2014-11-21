@@ -56,7 +56,7 @@ class Plugin extends PluginBase
         Event::listen('backend.form.extendFields', function($form) 
         {
             $editors = ['richeditor', 'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg'];
-            if ($form->model instanceof \ShahiemSeymor\Ckeditor\Models\Settings)
+            if($form->model instanceof \ShahiemSeymor\Ckeditor\Models\Settings)
             {
                 if(PluginManager::instance()->hasPlugin('Radiantweb.Problog'))
                 {
@@ -179,7 +179,7 @@ class Plugin extends PluginBase
 
     public static function useEditor($form, $editor)
     {
-        foreach ($form->getFields() as $field )
+        foreach ($form->getFields() as $field)
         {
             if (empty($field->config['type']) || !in_array($field->config['type'], $editor))
             continue;

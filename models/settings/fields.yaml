@@ -1,6 +1,10 @@
+fields:
+    content:
+        type: hint
+        path: @/plugins/shahiemseymor/ckeditor/models/settings/_content_field.htm
+
 tabs:
     fields:
-
         form_width:
             label: Width
             placeholder: 100%
