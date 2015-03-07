@@ -22,12 +22,11 @@ class Wysiwyg extends FormWidgetBase
     public function prepareVars()
     {
          $this->vars['name']      = $this->formField->getName();
-         $this->vars['value']     = $this->model->{$this->columnName};
+         $this->vars['value']     = $this->model->{$this->fieldName};
          $this->vars['width']     = Settings::instance()->form_width;
          $this->vars['height']    = Settings::instance()->form_height;
          $this->vars['toolbar']   = Settings::instance()->toolbar;
          $this->vars['skin']      = Settings::instance()->skin;
-         $this->vars['value']     = $this->model->{$this->columnName};
          $this->vars['up_public'] = Settings::instance()->up_public;
          $this->vars['language']  = Settings::instance()->language;
     }

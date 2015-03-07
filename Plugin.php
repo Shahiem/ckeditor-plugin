@@ -51,7 +51,7 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        App::register('Barryvdh\Elfinder\ElfinderServiceProvider');
+        \App::register('Barryvdh\Elfinder\ElfinderServiceProvider');
 
         Event::listen('backend.form.extendFields', function($form) 
         {
