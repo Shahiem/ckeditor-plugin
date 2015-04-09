@@ -19,9 +19,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'CKeditor',
-            'description' => 'CKEditor is a ready-for-use HTML text editor designed to simplify web content creation',
-            'author'      => 'ShahiemSeymor'
+            'name'          => 'CKeditor',
+            'description'   => 'CKEditor is a ready-for-use HTML text editor designed to simplify web content creation',
+            'author'        => 'ShahiemSeymor',
+            'homepage'      => 'https://octobercms.com/plugin/shahiemseymor-ckeditor',
         ];
     }
 
@@ -51,7 +52,7 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        \App::register('Barryvdh\Elfinder\ElfinderServiceProvider');
+        App::register('Barryvdh\Elfinder\ElfinderServiceProvider');
 
         Event::listen('backend.form.extendFields', function($form) 
         {
