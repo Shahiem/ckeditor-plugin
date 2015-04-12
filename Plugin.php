@@ -22,6 +22,7 @@ class Plugin extends PluginBase
             'name'          => 'CKeditor',
             'description'   => 'CKEditor is a ready-for-use HTML text editor designed to simplify web content creation',
             'author'        => 'ShahiemSeymor',
+            'icon'        => 'icon-paperclip',
             'homepage'      => 'https://octobercms.com/plugin/shahiemseymor-ckeditor',
         ];
     }
@@ -47,6 +48,13 @@ class Plugin extends PluginBase
                 'category'    =>  SettingsManager::CATEGORY_MYSETTINGS,
                 'class'       => 'ShahiemSeymor\Ckeditor\Models\Settings'
             ]
+        ];
+    }
+
+    public function registerComponents()
+    {
+        return [
+            'ShahiemSeymor\Ckeditor\Components\Ckeditor' => 'ckeditor',
         ];
     }
 
@@ -92,6 +100,20 @@ class Plugin extends PluginBase
                     $form->addFields([
                         'show_rainlab_pages_as_wysiwyg' => [
                             'label'     => 'Use RainLab - Static Pages',
+                            'type'      => 'switch',
+                            'span'      => 'auto',
+                            'default'   => 'false',
+                            'comment'   => 'If checked, the content entries will use the CKEditor.',
+                            'tab'       => 'Content'
+                        ]
+                    ], 'primary');
+                }
+
+                if(PluginManager::instance()->hasPlugin('RainLab.Editable'))
+                {
+                    $form->addFields([
+                        'show_rainlab_pages_as_wysiwyg' => [
+                            'label'     => 'Use RainLab - Editable',
                             'type'      => 'switch',
                             'span'      => 'auto',
                             'default'   => 'false',
@@ -175,6 +197,7 @@ class Plugin extends PluginBase
             {
                return static::useEditor($form, $editors);
             }
+
         });
     }
 
