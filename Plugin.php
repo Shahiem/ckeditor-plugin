@@ -1,8 +1,4 @@
 <?php
-/**
- * Created by ShahiemSeymor.
- * Date: 6/9/14
- */
 namespace ShahiemSeymor\Ckeditor;
 
 use App;
@@ -19,8 +15,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'          => 'CKeditor',
-            'description'   => 'CKEditor is a ready-for-use HTML text editor designed to simplify web content creation.',
+            'name'          => 'CKEditor',
+            'description'   => 'shahiemseymor.ckeditor::lang.plugin.description',
             'author'        => 'ShahiemSeymor',
             'icon'          => 'icon-paperclip',
             'homepage'      => 'https://octobercms.com/plugin/shahiemseymor-ckeditor',
@@ -42,7 +38,7 @@ class Plugin extends PluginBase
         return [
             'settings' => [
                 'label'       => 'CKEditor',
-                'description' => 'Manage CKEditor preferences.',
+                'description' => 'shahiemseymor.ckeditor::lang.settings.description',
                 'icon'        => 'icon-paperclip',
                 'context'     => 'mysettings',
                 'category'    =>  SettingsManager::CATEGORY_MYSETTINGS,
@@ -63,18 +59,19 @@ class Plugin extends PluginBase
         Event::listen('backend.form.extendFields', function($form) 
         {
             $editors = ['richeditor', 'codeeditor', 'Eein\Wysiwyg\FormWidgets\Trumbowyg'];
+
             if($form->model instanceof \ShahiemSeymor\Ckeditor\Models\Settings)
             {
                 if(PluginManager::instance()->hasPlugin('Radiantweb.Problog'))
                 {
                     $form->addFields([
                         'show_radiantweb_problog_as_wysiwyg' => [
-                            'label'     => 'Use Radiantweb - ProBlog',
+                            'label'     => 'shahiemseymor.ckeditor::lang.show.radiantweb_problog',
                             'type'      => 'switch',
                             'span'      => 'auto',
                             'default'   => 'false',
-                            'comment'   => 'If checked, the content entries will use the CKEditor.',
-                            'tab'       => 'Content'
+                            'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
                         ]
                     ], 'primary');
                 }
@@ -83,12 +80,12 @@ class Plugin extends PluginBase
                 {
                     $form->addFields([
                         'show_radiantweb_proevents_as_wysiwyg' => [
-                            'label'     => 'Use Radiantweb - ProEvents',
+                            'label'     => 'shahiemseymor.ckeditor::lang.show.radiantweb_proevents',
                             'type'      => 'switch',
                             'span'      => 'auto',
                             'default'   => 'false',
-                            'comment'   => 'If checked, the content entries will use the CKEditor.',
-                            'tab'       => 'Content'
+                            'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
                         ]
                     ], 'primary');
                 }
@@ -97,12 +94,12 @@ class Plugin extends PluginBase
                 {
                     $form->addFields([
                         'show_rainlab_pages_as_wysiwyg' => [
-                            'label'     => 'Use RainLab - Static Pages',
+                            'label'     => 'shahiemseymor.ckeditor::lang.show.rainlab_static_pages',
                             'type'      => 'switch',
                             'span'      => 'auto',
                             'default'   => 'false',
-                            'comment'   => 'If checked, the content entries will use the CKEditor.',
-                            'tab'       => 'Content'
+                            'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
                         ]
                     ], 'primary');
                 }
@@ -110,13 +107,13 @@ class Plugin extends PluginBase
                 if(PluginManager::instance()->hasPlugin('RainLab.Editable'))
                 {
                     $form->addFields([
-                        'show_rainlab_pages_as_wysiwyg' => [
-                            'label'     => 'Use RainLab - Editable',
+                        'show_rainlab_editable_as_wysiwyg' => [
+                            'label'     => 'shahiemseymor.ckeditor::lang.show.rainlab_editable',
                             'type'      => 'switch',
                             'span'      => 'auto',
                             'default'   => 'false',
-                            'comment'   => 'If checked, the content entries will use the CKEditor.',
-                            'tab'       => 'Content'
+                            'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
                         ]
                     ], 'primary');
                 }
@@ -125,12 +122,12 @@ class Plugin extends PluginBase
                 {
                     $form->addFields([
                         'show_rainlab_blog_as_wysiwyg' => [
-                            'label'     => 'Use RainLab - Blog',
+                            'label'     => 'shahiemseymor.ckeditor::lang.show.rainlab_blog',
                             'type'      => 'switch',
                             'span'      => 'auto',
                             'default'   => 'false',
-                            'comment'   => 'If checked, the content entries will use the CKEditor.',
-                            'tab'       => 'Content'
+                            'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
                         ]
                     ], 'primary');
                 }
@@ -139,12 +136,12 @@ class Plugin extends PluginBase
                 {
                     $form->addFields([
                         'show_shahiem_maintenance_as_wysiwyg' => [
-                            'label'     => 'Use ShahiemSeymor - Maintenance',
+                            'label'     => 'shahiemseymor.ckeditor::lang.show.shahiemseymor_maintenance',
                             'type'      => 'switch',
                             'span'      => 'auto',
                             'default'   => 'false',
-                            'comment'   => 'If checked, the content entries will use the CKEditor.',
-                            'tab'       => 'Content'
+                            'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
                         ]
                     ], 'primary');
                 }
