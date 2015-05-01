@@ -12,3 +12,4 @@
 1.0.12: Update for RC(2)
 1.0.13: Added component for Editable plugin. See documentation
 1.0.14: Elfinder is replaced for OctoberCMS Media Manger. (Only images for now)
+1.0.15: Multilanguage support (Backend).  Added dutch language

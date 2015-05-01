@@ -1,7 +1,7 @@
 <?php
 return [
     'plugin' => [
-        'description' => 'CKEditor is a ready-for-use HTML text editor designed to simplify web content creation.',
+        'description' => 'CKEditor is a free, Open Source HTML text editor.',
     ],
     'plugins' => [
         'comment' => 'If checked, the content entries will use the CKEditor.',
