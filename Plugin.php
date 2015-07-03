@@ -17,7 +17,7 @@ class Plugin extends PluginBase
         return [
             'name'          => 'CKEditor',
             'description'   => 'shahiemseymor.ckeditor::lang.plugin.description',
-            'author'        => 'ShahiemSeymor',
+            'author'        => 'Shahiem Seymor',
             'icon'          => 'icon-paperclip',
             'homepage'      => 'https://octobercms.com/plugin/shahiemseymor-ckeditor',
         ];
