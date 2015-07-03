@@ -1,24 +1,8 @@
-<div data-control="wysiwyg">
+<div data-control="wysiwyg" 
+	 data-width="<?php echo $width; ?>"
+	 data-height="<?php echo $height; ?>"
+	 data-toolbar="<?php echo (trim($toolbar) == ''? 'Basic' : ucfirst($toolbar)); ?>"
+	 data-theme="<?php echo (trim($skin) == '' ? 'october' : $skin); ?>"
+	 data-lang="<?php echo (trim($language) == '' ? 'en' : $language); ?>">
  	<textarea name="<?php echo $name ?>" id="<?php echo $this->getId('textarea') ?>"><?= e($value) ?></textarea>
 </div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-	$('[data-control="wysiwyg"] textarea').ckeditor({
-		width:    '<?php echo $width; ?>',
-		height:   '<?php echo $height; ?>',
-		toolbar:  '<?php echo (trim($toolbar) == ''? 'Basic' : ucfirst($toolbar)); ?>',
-		skin:     '<?php echo (trim($skin) == '' ? 'october' : $skin); ?>',
-		language: '<?php echo (trim($language) == '' ? 'en' : $language); ?>'
-	}).ckeditor(function() {
-		this.addCommand('saveForm', {
-			exec: function(editor) {
-				jQuery(editor.element.$).closest('FORM').find('[data-hotkey]').filter(function() {
-					return $(this).data('hotkey') == 'ctrl+s';
-				}).eq(0).trigger('click');
-			}
-		});
-		this.keystrokeHandler.keystrokes[CKEDITOR.CTRL + 83 /* S */] = 'saveForm';
-	});
-});
-</script>
