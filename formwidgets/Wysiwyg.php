@@ -35,6 +35,7 @@ class Wysiwyg extends FormWidgetBase
     {
         $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/wysiwyg/assets/ckeditor/ckeditor.js',        'ShahiemSeymor.Ckeditor');
         $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/wysiwyg/assets/ckeditor/adapters/jquery.js', 'ShahiemSeymor.Ckeditor');
-        $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/wysiwyg/assets/javascript/editor.js.js',     'ShahiemSeymor.Ckeditor');
+        $this->addJs('/plugins/shahiemseymor/ckeditor/formwidgets/wysiwyg/assets/javascript/editor.js',        'ShahiemSeymor.Ckeditor');
     }
+    
 }

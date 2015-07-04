@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ $(document).render(function () {
 	 $('[data-control="wysiwyg"] textarea').ckeditor({
 		width:    '' + $('[data-control="wysiwyg"]').data("width") + '',
 		height:   '' + $('[data-control="wysiwyg"]').data("height") + '',
