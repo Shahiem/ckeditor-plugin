@@ -19,7 +19,7 @@ class Plugin extends PluginBase
             'description'   => 'shahiemseymor.ckeditor::lang.plugin.description',
             'author'        => 'Shahiem Seymor',
             'icon'          => 'icon-paperclip',
-            'homepage'      => 'https://octobercms.com/plugin/shahiemseymor-ckeditor',
+            'homepage'      => 'https://octobercms.com/plugin/shahiemseymor-ckeditor'
         ];
     }
 
@@ -71,7 +71,7 @@ class Plugin extends PluginBase
                             'span'      => 'auto',
                             'default'   => 'false',
                             'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
-                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab'
                         ]
                     ], 'primary');
                 }
@@ -85,7 +85,7 @@ class Plugin extends PluginBase
                             'span'      => 'auto',
                             'default'   => 'false',
                             'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
-                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab'
                         ]
                     ], 'primary');
                 }
@@ -99,7 +99,7 @@ class Plugin extends PluginBase
                             'span'      => 'auto',
                             'default'   => 'false',
                             'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
-                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab'
                         ]
                     ], 'primary');
                 }
@@ -113,7 +113,7 @@ class Plugin extends PluginBase
                             'span'      => 'auto',
                             'default'   => 'false',
                             'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
-                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab'
                         ]
                     ], 'primary');
                 }
@@ -127,7 +127,7 @@ class Plugin extends PluginBase
                             'span'      => 'auto',
                             'default'   => 'false',
                             'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
-                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab'
                         ]
                     ], 'primary');
                 }
@@ -141,7 +141,7 @@ class Plugin extends PluginBase
                             'span'      => 'auto',
                             'default'   => 'false',
                             'comment'   => 'shahiemseymor.ckeditor::lang.plugins.comment',
-                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab',
+                            'tab'       => 'shahiemseymor.ckeditor::lang.plugins.tab'
                         ]
                     ], 'primary');
                 }
