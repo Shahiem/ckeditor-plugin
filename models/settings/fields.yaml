@@ -21,6 +21,7 @@ tabs:
             type: dropdown
             options:
                 basic: shahiemseymor.ckeditor::lang.toolbar.basic
+                editor: shahiemseymor.ckeditor::lang.toolbar.editor
                 full: shahiemseymor.ckeditor::lang.toolbar.full
             tab: shahiemseymor.ckeditor::lang.settings.editor
             span: left
@@ -31,6 +32,10 @@ tabs:
             options:
                 moono: Moono
                 october: October
+                office2013: Office2013
+                moono-dark: Moono-dark                
+                icy_orange: Icy-orange
+                flat: Flat
             tab: shahiemseymor.ckeditor::lang.settings.editor
             span: right
 

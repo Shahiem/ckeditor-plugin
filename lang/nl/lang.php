@@ -21,6 +21,7 @@ return [
     ],
     'toolbar' => [
         'full'                      => 'Volledig',
+        'editor'                    => 'Redaktør',
         'basic'                     => 'Basis',
     ],
     'language' => [

@@ -11,6 +11,22 @@ CKEDITOR.editorConfig = function( config ) {
    		['MediaManager','Table','-','Link','Flash','Youtube','Smiley','TextColor','BGColor']
 	];
 
+    config.toolbar_Editor = [
+	    { name: 'document',    groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source', 'Templates' ] },
+	    { name: 'clipboard',   groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', 'Undo', 'Redo' ] },
+	    { name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', 'SelectAll', 'Scayt' ] },
+	    { name: 'insert', items: [ 'CreatePlaceholder', 'MediaManager', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe', 'InsertPre' ] },
+	    '/',
+	    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', 'RemoveFormat' ] },
+	    { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align' ], items: [ 'NumberedList', 'BulletedList', 'Outdent', 'Indent', 'Blockquote', 'CreateDiv', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'BidiLtr', 'BidiRtl' ] },
+	    { name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+	    '/',
+	    { name: 'styles', items: [ 'Styles', 'Format', 'FontSize' ] },
+	    { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+	    { name: 'tools', items: [ 'UIColor', 'Maximize', 'ShowBlocks' ] },
+	    { name: 'about', items: [ 'About' ] }
+	  ];
+
 	config.toolbar_Full = [
 	    { name: 'document',    groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source', 'Save', 'NewPage', 'DocProps', 'Preview', 'Print', 'Templates', 'document' ] },
 	    { name: 'clipboard',   groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', 'Undo', 'Redo' ] },

@@ -21,6 +21,7 @@ return [
     ],
     'toolbar' => [
         'full' => 'Full',
+        'editor' => 'Editor',
         'basic' => 'Basic',
     ],
     'language' => [
