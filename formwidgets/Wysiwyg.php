@@ -22,7 +22,7 @@ class Wysiwyg extends FormWidgetBase
     public function prepareVars()
     {
          $this->vars['name']      = $this->formField->getName();
-         $this->vars['value']     = $this->model->{$this->fieldName};
+         $this->vars['value']     = $this->getLoadValue();
          $this->vars['width']     = Settings::instance()->form_width;
          $this->vars['height']    = Settings::instance()->form_height;
          $this->vars['toolbar']   = Settings::instance()->toolbar;
